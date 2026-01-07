@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeLux | Industrial Solid Waste Resource Recovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&family=Inter:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        .spacex-font { font-family: 'Oswald', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
+        
+        .hero-bg {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2000'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .content-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        
+        .solution-card {
+            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.02);
+            transition: all 0.4s ease;
+        }
+        .solution-card:hover {
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-5px);
+        }
+
+        .tech-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            filter: grayscale(100%) brightness(0.7);
+            transition: all 0.8s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .tech-img:hover { filter: grayscale(0%) brightness(1); border-color: #fff; }
+
+        .location-tag {
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            margin: 3px;
+            display: inline-block;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-black/80 backdrop-blur-lg border-b border-white/5">
+        <div class="text-2xl font-bold spacex-font italic">BridgeLux</div>
+        <div class="hidden lg:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#about" class="hover:text-gray-400">About</a>
+            <a href="#solutions" class="hover:text-gray-400">Solutions</a>
+            <a href="#technology" class="hover:text-gray-400">Technology</a>
+            <a href="#projects" class="hover:text-gray-400">Projects</a>
+        </div>
+        <!-- 语言切换按钮 -->
+        <button id="toggle-lang" class="text-sm text-white bg-black p-2 rounded">
+            繁體中文
+        </button>
+    </nav>
+
+    <header class="hero-bg">
+        <div class="px-4">
+            <h2 id="hero-title" class="text-xs font-bold uppercase tracking-[0.6em] mb-6 text-gray-400">Pioneering Circular Systems</h2>
+            <h1 id="hero-heading" class="text-5xl md:text-8xl font-bold spacex-font mb-8">
+                Transforming Solid Waste <br><span class="text-gray-500 italic">into Sustainable Value</span>
+            </h1>
+            <div class="w-24 h-px bg-white mx-auto mb-10"></div>
+            <p id="hero-description" class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 font-light italic leading-relaxed">
+                Waste-to-energy slag treatment and resource recovery delivering compliant, <br>scalable solutions across China and Southeast Asia.
+            </p>
+        </div>
+    </header>
+
+    <section id="about" class="py-32 bg-black">
+        <div class="content-container">
+            <div class="grid lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5">
+                    <h2 id="about-title" class="text-xs font-bold uppercase tracking-[0.4em] text-gray-500 mb-6">About Us</h2>
+                    <h3 id="about-heading" class="text-4xl font-bold spacex-font leading-tight">Professional <br>Resource Recovery <br>Enterprise</h3>
+                </div>
+                <div class="lg:col-span-7 text-gray-400 space-y-8 font-light leading-relaxed border-l border-white/10 pl-10">
+                    <p id="about-text">We are a professional solid-waste resource recovery enterprise dedicated to the treatment and reutilization of incineration slag and industrial solid waste. Our business spans project development, system design, facility construction, and long-term operation, with solutions tailored to regional waste characteristics and regulatory requirements.</p>
+                    <p id="about-text-2">Our work is grounded in the core principles of reduction, harmless treatment, and resource utilization. By applying proven engineering methods and continuously optimizing process systems, we convert solid-waste residues into environmentally compliant construction materials and industrial resources, while ensuring strict control of emissions, wastewater, and secondary pollution. With operating projects in multiple provinces in China and in Vietnam, we have accumulated extensive experience in managing complex waste streams, including high-moisture and high-impurity materials common in urban and industrial environments. We position ourselves as a long-term infrastructure partner rather than a short-term service provider, focusing on stability, compliance, and sustainable value creation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-32 bg-[#050505]">
+        <div class="content-container">
+            <h2 id="solutions-heading" class="text-4xl spacex-font mb-20 text-center">Core Solutions</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="solution-card p-10">
+                    <h4 id="solution-1-title" class="text-xl font-bold mb-4 uppercase text-white">WTE Slag Resource Recovery</h4>
+                    <p id="solution-1-text" class="text-sm text-gray-400">Through multi-stage crushing, screening, separation, and purification processes, incineration slag is transformed into clean aggregates and reusable materials.</p>
+                </div>
+                <div class="solution-card p-10">
+                    <h4 id="solution-2-title" class="text-xl font-bold mb-4 uppercase text-white">Industrial Solid Waste Utilization</h4>
+                    <p id="solution-2-text" class="text-sm text-gray-400">Tailored treatment for biomass slag and coal-derived residues, adapted to specific material composition and local environmental standards.</p>
+                </div>
+                <div class="solution-card p-10">
+                    <h4 id="solution-3-title" class="text-xl font-bold mb-4 uppercase text-white">Environmental Control Systems</h4>
+                    <p id="solution-3-text" class="text-sm text-gray-400">Fully enclosed material handling, odor control, and dust suppression systems ensuring zero wastewater discharge and minimal fugitive emissions.</p>
+                </div>
+                <div class="solution-card p-10">
+                    <h4 id="solution-4-title" class="text-xl font-bold mb-4 uppercase text-white">Resource-Based End Products</h4>
+                    <p id="solution-4-text" class="text-sm text-gray-400">Stable, quality-controlled products suitable for use in green building materials, road base layers, and municipal infrastructure projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="py-32 bg-black">
+        <div class="content-container text-center">
+            <h2 id="technology-heading" class="text-4xl spacex-font mb-20">Technology & Process</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-6">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" class="tech-img">
+                    <h4 class="text-xl font-bold uppercase">Pre-treatment</h4>
+                    <p id="tech-1-description" class="text-xs text-gray-500 italic">Our technology framework is built around a modular, end-to-end processing system that covers pre-treatment, separation, purification, and product formation. Incineration slag first undergoes controlled aging and conditioning, followed by multi-level crushing and screening to achieve particle size differentiation.</p>
+                </div>
+                <div class="space-y-6">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" class="tech-img">
+                    <h4 class="text-xl font-bold uppercase">Advanced Separation</h4>
+                    <p id="tech-2-description" class="text-xs text-gray-500 italic">Advanced physical separation techniques—including magnetic separation, eddy current separation, and gravity-based sorting—are applied to recover metals and remove impurities. Fine tailings are further purified to meet material reuse standards, while recycled aggregates are processed for consistent quality and performance.</p>
+                </div>
+                <div class="space-y-6">
+                    <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=800" class="tech-img">
+                    <h4 class="text-xl font-bold uppercase">Eco-Integration</h4>
+                    <p id="tech-3-description" class="text-xs text-gray-500 italic">All facilities incorporate integrated environmental protection systems, including sealed conveyors, odor treatment units, and internal water recycling. Process designs are optimized for local conditions, such as high humidity, high organic content, or plateau climates, ensuring stable operation and compliance with applicable environmental regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 bg-[#050505]">
+        <div class="content-container">
+            <h2 id="projects-heading" class="text-4xl spacex-font mb-20 text-center">Global Footprint</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left mb-24">
+                <div class="p-10 border border-white/5 bg-black hover:border-white/30 transition">
+                    <h4 class="text-2xl font-bold mb-4 uppercase italic">Vietnam</h4>
+                    <p id="project-1-description" class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Supporting major municipal waste-to-energy facilities in <strong>Ho Chi Minh City</strong> by providing dedicated slag resource recovery lines, enabling the transition from simple disposal to systematic reuse.
+                    </p>
+                    <div class="flex flex-wrap"><span class="location-tag">Ho Chi Minh City</span></div>
+                </div>
+                <div class="p-10 border border-white/5 bg-black hover:border-white/30 transition">
+                    <h4 class="text-2xl font-bold mb-4 uppercase italic">Mainland China</h4>
+                    <p id="project-2-description" class="text-gray-400 text-sm mb-6 leading-relaxed">
+                        Extensive operations across urban and regional waste streams. We have accumulated deep experience in managing complex, high-moisture materials common in diverse climates from Jilin to Guangxi.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="location-tag">Shandong</span><span class="location-tag">Guizhou</span><span class="location-tag">Jilin</span>
+                        <span class="location-tag">Hebei</span><span class="location-tag">Guangxi</span><span class="location-tag">Henan</span><span class="location-tag">Hunan</span>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-600 mb-12 text-center">Strategic Partners</h4>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:opacity-100 transition duration-1000">
+                <span class="text-lg font-bold">VIETSTAR</span>
+                <span class="text-lg font-bold">BCG ENERGY</span>
+                <span class="text-lg font-bold">SUS ENVIRONMENT</span>
+                <span class="text-lg font-bold">EVERBRIGHT ENVIRONMENT</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-white/5 text-center">
+        <div class="text-[10px] text-gray-800 uppercase tracking-widest">
+            &copy; 2026 BridgeLux. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // 存储英文和中文的文本
+        const langData = {
+            en: {
+                heroTitle: "Pioneering Circular Systems",
+                heroHeading: "Transforming Solid Waste into Sustainable Value",
+                heroDescription: "Waste-to-energy slag treatment and resource recovery delivering compliant, scalable solutions across China and Southeast Asia.",
+                aboutTitle: "About Us",
+                aboutHeading: "Professional Resource Recovery Enterprise",
+                aboutText: "We are a professional solid-waste resource recovery enterprise dedicated to the treatment and reutilization of incineration slag and industrial solid waste. Our business spans project development, system design, facility construction, and long-term operation, with solutions tailored to regional waste characteristics and regulatory requirements.",
+                aboutText2: "Our work is grounded in the core principles of reduction, harmless treatment, and resource utilization. By applying proven engineering methods and continuously optimizing process systems, we convert solid-waste residues into environmentally compliant construction materials and industrial resources, while ensuring strict control of emissions, wastewater, and secondary pollution. With operating projects in multiple provinces in China and in Vietnam, we have accumulated extensive experience in managing complex waste streams, including high-moisture and high-impurity materials common in urban and industrial environments. We position ourselves as a long-term infrastructure partner rather than a short-term service provider, focusing on stability, compliance, and sustainable value creation.",
+                solutionsHeading: "Core Solutions",
+                solution1Title: "WTE Slag Resource Recovery",
+                solution1Text: "Through multi-stage crushing, screening, separation, and purification processes, incineration slag is transformed into clean aggregates and reusable materials.",
+                solution2Title: "Industrial Solid Waste Utilization",
+                solution2Text: "Tailored treatment for biomass slag and coal-derived residues, adapted to specific material composition and local environmental standards.",
+                solution3Title: "Environmental Control Systems",
+                solution3Text: "Fully enclosed material handling, odor control, and dust suppression systems ensuring zero wastewater discharge and minimal fugitive emissions.",
+                solution4Title: "Resource-Based End Products",
+                solution4Text: "Stable, quality-controlled products suitable for use in green building materials, road base layers, and municipal infrastructure projects.",
+                technologyHeading: "Technology & Process",
+                tech1Description: "Our technology framework is built around a modular, end-to-end processing system that covers pre-treatment, separation, purification, and product formation. Incineration slag first undergoes controlled aging and conditioning, followed by multi-level crushing and screening to achieve particle size differentiation.",
+                tech2Description: "Advanced physical separation techniques—including magnetic separation, eddy current separation, and gravity-based sorting—are applied to recover metals and remove impurities. Fine tailings are further purified to meet material reuse standards, while recycled aggregates are processed for consistent quality and performance.",
+                tech3Description: "All facilities incorporate integrated environmental protection systems, including sealed conveyors, odor treatment units, and internal water recycling. Process designs are optimized for local conditions, such as high humidity, high organic content, or plateau climates, ensuring stable operation and compliance with applicable environmental regulations.",
+                projectsHeading: "Global Footprint",
+                project1Description: "Supporting major municipal waste-to-energy facilities in Ho Chi Minh City by providing dedicated slag resource recovery lines, enabling the transition from simple disposal to systematic reuse.",
+                project2Description: "Extensive operations across urban and regional waste streams. We have accumulated deep experience in managing complex, high-moisture materials common in diverse climates from Jilin to Guangxi.",
+                partners: "Strategic Partners",
+            },
+            zh: {
+                heroTitle: "开创循环系统",
+                heroHeading: "将固体废物转化为可持续价值",
+                heroDescription: "垃圾发电炉渣处理和资源回收，提供符合要求、可扩展的解决方案，覆盖中国和东南亚。",
+                aboutTitle: "关于我们",
+                aboutHeading: "专业资源回收企业",
+                aboutText: "我们是一家专业的固体废物资源回收企业，致力于垃圾焚烧炉渣和工业固体废物的处理和再利用。我们的业务涵盖项目开发、系统设计、设施建设和长期运营，解决方案根据区域废物特性和监管要求量身定制。",
+                aboutText2: "我们的工作基于减少、无害化处理和资源利用的核心原则。通过应用经过验证的工程方法并持续优化过程系统，我们将固体废物残渣转化为符合环保要求的建筑材料和工业资源，同时严格控制排放、废水和二次污染。在中国和越南的多个省份运营项目，我们积累了管理复杂废物流的丰富经验，包括在城市和工业环境中常见的高湿度和高杂质材料。我们将自己定位为长期基础设施合作伙伴，而非短期服务提供商，专注于稳定性、合规性和可持续价值创造。",
+                solutionsHeading: "核心解决方案",
+                solution1Title: "垃圾焚烧炉渣资源回收",
+                solution1Text: "通过多阶段破碎、筛分、分离和净化工艺，将垃圾焚烧炉渣转化为洁净的集料和可再利用材料。",
+                solution2Title: "工业固体废物利用",
+                solution2Text: "根据生物质炉渣和煤渣的具体成分以及当地环境标准，量身定制处理方案。",
+                solution3Title: "环境控制系统",
+                solution3Text: "全封闭物料处理、气味控制和粉尘抑制系统，确保零废水排放和最小的逸散排放。",
+                solution4Title: "基于资源的最终产品",
+                solution4Text: "稳定、质量控制的产品，适用于绿色建筑材料、道路基础层和市政基础设施项目。",
+                technologyHeading: "技术与工艺",
+                tech1Description: "我们的技术框架围绕一个模块化的端到端处理系统建立，涵盖了预处理、分离、净化和产品形成。垃圾焚烧炉渣首先经过控制的老化和调理，然后进行多级破碎和筛分以实现颗粒尺寸的区分。",
+                tech2Description: "包括磁分离、电流分离和重力分选等先进的物理分离技术，用于回收金属并去除杂质。细尾矿进一步净化，以满足材料再利用标准，而回收的集料则经过处理以保持一致的质量和性能。",
+                tech3Description: "所有设施都集成了环境保护系统，包括封闭传送带、气味处理单元和内部水循环。工艺设计根据当地条件（如高湿度、高有机含量或高原气候）进行优化，确保稳定运行并符合相关的环境法规。",
+                projectsHeading: "全球足迹",
+                project1Description: "支持胡志明市主要的垃圾发电设施，通过提供专用的炉渣资源回收线，实现从简单处理到系统性再利用的转变。",
+                project2Description: "在城市和地区废物流中广泛运营。我们积累了管理复杂、高湿度材料的深厚经验，这些材料在从吉林到广西的不同气候条件下较为常见。",
+                partners: "战略合作伙伴",
+            }
+        };
+
+        // 切换语言的函数
+        function switchLanguage(lang) {
+            document.getElementById("hero-title").textContent = langData[lang].heroTitle;
+            document.getElementById("hero-heading").textContent = langData[lang].heroHeading;
+            document.getElementById("hero-description").textContent = langData[lang].heroDescription;
+            document.getElementById("about-title").textContent = langData[lang].aboutTitle;
+            document.getElementById("about-heading").textContent = langData[lang].aboutHeading;
+            document.getElementById("about-text").textContent = langData[lang].aboutText;
+            document.getElementById("about-text-2").textContent = langData[lang].aboutText2;
+            document.getElementById("solutions-heading").textContent = langData[lang].solutionsHeading;
+            document.getElementById("solution-1-title").textContent = langData[lang].solution1Title;
+            document.getElementById("solution-1-text").textContent = langData[lang].solution1Text;
+            document.getElementById("solution-2-title").textContent = langData[lang].solution2Title;
+            document.getElementById("solution-2-text").textContent = langData[lang].solution2Text;
+            document.getElementById("solution-3-title").textContent = langData[lang].solution3Title;
+            document.getElementById("solution-3-text").textContent = langData[lang].solution3Text;
+            document.getElementById("solution-4-title").textContent = langData[lang].solution4Title;
+            document.getElementById("solution-4-text").textContent = langData[lang].solution4Text;
+            document.getElementById("technology-heading").textContent = langData[lang].technologyHeading;
+            document.getElementById("tech-1-description").textContent = langData[lang].tech1Description;
+            document.getElementById("tech-2-description").textContent = langData[lang].tech2Description;
+            document.getElementById("tech-3-description").textContent = langData[lang].tech3Description;
+            document.getElementById("projects-heading").textContent = langData[lang].projectsHeading;
+            document.getElementById("project-1-description").textContent = langData[lang].project1Description;
+            document.getElementById("project-2-description").textContent = langData[lang].project2Description;
+            document.getElementById("partners").textContent = langData[lang].partners;
+            
+            // 切换按钮文本
+            document.getElementById("toggle-lang").textContent = lang === "en" ? "繁體中文" : "English";
+        }
+
+        // 为按钮添加点击事件监听，切换语言
+        document.getElementById("toggle-lang").addEventListener("click", () => {
+            const currentLang = document.getElementById("toggle-lang").textContent === "繁體中文" ? "en" : "zh";
+            switchLanguage(currentLang);
+        });
+
+        // 默认语言初始化为英文
+        switchLanguage("en");
+    </script>
+
+</body>
+</html>
